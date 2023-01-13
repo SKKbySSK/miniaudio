@@ -37051,6 +37051,7 @@ static ma_result ma_device_reinit__aaudio(ma_device* pDevice, ma_device_type dev
         deviceConfig.aaudio.usage                   = pDevice->aaudio.usage;
         deviceConfig.aaudio.contentType             = pDevice->aaudio.contentType;
         deviceConfig.aaudio.inputPreset             = pDevice->aaudio.inputPreset;
+        deviceConfig.aaudio.allowedCapturePolicy    = pDevice->aaudio.allowedCapturePolicy;
         deviceConfig.aaudio.noAutoStartAfterReroute = pDevice->aaudio.noAutoStartAfterReroute;
         deviceConfig.periods                        = 1;
 
