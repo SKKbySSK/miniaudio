@@ -25336,6 +25336,18 @@ static ma_aaudio_input_preset_t ma_to_input_preset__aaudio(ma_aaudio_input_prese
     return MA_AAUDIO_INPUT_PRESET_GENERIC;
 }
 
+static ma_aaudio_allowed_capture_policy_t ma_to_allowed_capture_policy__aaudio(ma_aaudio_allowed_capture_policy allowedCapturePolicy)
+{
+    switch (allowedCapturePolicy) {
+        case ma_aaudio_allow_capture_by_all:       return MA_AAUDIO_ALLOW_CAPTURE_BY_ALL;
+        case ma_aaudio_allow_capture_by_system:        return MA_AAUDIO_ALLOW_CAPTURE_BY_SYSTEM;
+        case ma_aaudio_allow_capture_by_none:        return MA_AAUDIO_ALLOW_CAPTURE_BY_NONE;
+        default: break;
+    }
+
+    return MA_AAUDIO_ALLOW_CAPTURE_BY_ALL;
+}
+
 static void ma_stream_error_callback__aaudio(ma_AAudioStream* pStream, void* pUserData, ma_aaudio_result_t error)
 {
     ma_device* pDevice = (ma_device*)pUserData;
