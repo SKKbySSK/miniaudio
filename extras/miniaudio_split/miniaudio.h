@@ -3899,6 +3899,7 @@ struct ma_device
             ma_aaudio_usage usage;
             ma_aaudio_content_type contentType;
             ma_aaudio_input_preset inputPreset;
+            ma_aaudio_allowed_capture_policy allowedCapturePolicy;
             ma_bool32 noAutoStartAfterReroute;
         } aaudio;
 #endif
