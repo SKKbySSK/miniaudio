@@ -25748,6 +25748,7 @@ static ma_result ma_device_init__aaudio(ma_device* pDevice, const ma_device_conf
     pDevice->aaudio.usage                   = pConfig->aaudio.usage;
     pDevice->aaudio.contentType             = pConfig->aaudio.contentType;
     pDevice->aaudio.inputPreset             = pConfig->aaudio.inputPreset;
+    pDevice->aaudio.allowedCapturePolicy    = pConfig->aaudio.allowedCapturePolicy;
     pDevice->aaudio.noAutoStartAfterReroute = pConfig->aaudio.noAutoStartAfterReroute;
 
     if (pConfig->deviceType == ma_device_type_capture || pConfig->deviceType == ma_device_type_duplex) {
